@@ -11,8 +11,8 @@
 	<param name="draw-S" type="int" min="0" max="20000" _gui-text="Before Draw S parameter (0-1000):">700</param>
 	<param name="nodraw-command" type="string" _gui-text="After Draw Command:">M4</param>
 	<param name="nodraw-S" type="int" min="0" max="20000" _gui-text="After Draw S parameter (0-1000):">200</param>
-	<param name="draw-delay" type="int" min="0" max="1000" _gui-text="Before Draw Delay (ms):">150</param>
-	<param name="nodraw-delay" type="int" min="0" max="1000" _gui-text="After Draw Delay (ms):">150</param>
+	<param name="draw-delay" type="int" min="0" max="1000" _gui-text="Before Draw Delay (ms):">300</param>
+	<param name="nodraw-delay" type="int" min="0" max="1000" _gui-text="After Draw Delay (ms):">300</param>
 	<param name="directory" type="string" _gui-text="Directory:"></param>
 	<param name="filename" type="string" _gui-text="Filename:">output.gcode</param>
 	<param name="add-numeric-suffix-to-filename" type="boolean" _gui-text="Add numeric suffix to filename">true</param>
