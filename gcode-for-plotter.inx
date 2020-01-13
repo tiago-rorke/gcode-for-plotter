@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>Generate G-code</_name>
+    <id>gcode_for_plotter</id>
+	<dependency type="executable" location="extensions">gcode-for-plotter.py</dependency>
+	<dependency type="executable" location="extensions">inkex.py</dependency>
+
+	<param name="travel-speed" type="int" min="0" max="10000" _gui-text="Travel Speed (mm/min or in/min):">10000</param>
+	<param name="draw-speed" type="int" min="0" max="10000" _gui-text="Draw Speed (mm/min or in/min):">8000</param>
+	<param name="draw-command" type="string" _gui-text="Before Draw Command:">M4</param>
+	<param name="draw-S" type="int" min="0" max="20000" _gui-text="Before Draw S parameter (0-255):">0</param>
+	<param name="nodraw-command" type="string" _gui-text="After Draw Command:">M4</param>
+	<param name="nodraw-S" type="int" min="0" max="20000" _gui-text="After Draw S parameter (0-255):">500</param>
+	<param name="draw-delay" type="int" min="0" max="1000" _gui-text="Before Draw Delay (ms):">150</param>
+	<param name="nodraw-delay" type="int" min="0" max="1000" _gui-text="After Draw Delay (ms):">150</param>
+	<param name="directory" type="string" _gui-text="Directory:"></param>
+	<param name="filename" type="string" _gui-text="Filename:">output.gcode</param>
+	<param name="add-numeric-suffix-to-filename" type="boolean" _gui-text="Add numeric suffix to filename">true</param>
+
+  <param name="unit" type="enum" _gui-text="All Units (mm or in):">
+    <item value="G21 (All units in mm)">mm</item>
+    <item value="G20 (All units in inches)">in</item>
+  </param>
+
+	<effect>
+		<effects-menu>
+			<submenu _name="G-code for Plotter"/>
+		</effects-menu>
+		<object-type>path</object-type>
+  	</effect>
+
+	<script>
+		<command reldir="extensions" interpreter="python">gcode-for-plotter.py</command>
+	</script>
+
+</inkscape-extension>
